@@ -1,13 +1,28 @@
 // Include le fichier CSS avec: link(rel="stylesheet", href="/style.css")
-
 html
-  head
-    meta(charset="utf-8")
-    title Labo Semantic IA
-    figure(src='/img/lo')
-    h1 = Intelligence artifiel
-    nav
-  
-  body
-    block content
-    block foot
+    head
+        meta(charset="utf-8")
+        title Labo Semantic AI
+
+
+
+    body
+        p Labo Semantic IA
+        p Intelligence artificielle
+        p Web Sémantique
+        img(src='./img/logo-coding.png')
+        nav
+            ul
+                each pageList in [['Accueil','index'],['Equipe','team'],['projet','projet'],['Publication','publications'],['Contact','contact']]
+                    li
+                        a(href= pageList[1])= pageList[0]
+
+        block content
+
+
+    footer
+        p private site
+        p LOG4420 - Polytechnique Montreal
+        block foot
+
+
