@@ -1,4 +1,5 @@
 extends layout.pug
+include ./mixins/mixin_projet.pug
 
 block content
     -
@@ -75,38 +76,14 @@ block content
             }
           ]
 
+
           const pastProjects = []
+
+
     Section
         h1 Current Project
-        ul
-            each project in currentProjects
-                if project.current
-                    div
-                        li
-                            p
-                            =project.student
-                            |,
-                            a(href= "project-"+project._id+".pug")= project.title
-                            p
-                            |Supervisor:
-                            =project.supervisor
-                            p
-                            |Co-supervisor(s):
-                            =project.cosupervisor
+        +projet(currentProjects)
+
 
         h1 Past Project
-            ul
-                each project in currentProjects
-                    if !project.current
-                        div
-                            li
-                                p
-                                =project.student
-                                | ,
-                                a(href= "project-"+project._id+".pug")= project.title
-                                p
-                                | Supervisor:
-                                =project.supervisor
-                                p
-                                | Co-supervisor(s):
-                                =project.cosupervisor
+        +projet(pastProjects)
