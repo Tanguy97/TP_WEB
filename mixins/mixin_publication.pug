@@ -1,5 +1,21 @@
-mixin publication
-  div 
-    input(type="button" )
+mixin publication(publications)
+  div
+    table
+      each publication in publications
+        tr
+          th
+            i.fa.fa-trash-o.fa-2x
+            p
+              = publication.year
+              br
+              = publication.month 
+          th
+            p= publication.title
+            p= publication.authors
+            p= publication.venue
+        
+          
+          
+    
       
   

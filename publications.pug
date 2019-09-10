@@ -1,4 +1,5 @@
 extends layout.pug
+include mixins/mixin_publication.pug
 
 block content
 
@@ -122,7 +123,6 @@ block content
     p= 'Order by:'
       select(name="descending" size=1)
         option= 'descending'
-    each publication in publications
-      
+      +publication(publications)
       
   
