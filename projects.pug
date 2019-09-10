@@ -86,7 +86,7 @@ block content
                             p
                             =project.student
                             |,
-                            =project.title
+                            a(href= "project-"+project._id+".pug")= project.title
                             p
                             |Supervisor:
                             =project.supervisor
@@ -101,12 +101,12 @@ block content
                         div
                             li
                                 p
-                                    =project.student
-                                    | ,
-                                    =project.title
-                                    p
-                                    | Supervisor:
-                                    =project.supervisor
-                                    p
-                                    | Co-supervisor(s):
-                                    =project.cosupervisor
+                                =project.student
+                                | ,
+                                a(href= "project-"+project._id+".pug")= project.title
+                                p
+                                | Supervisor:
+                                =project.supervisor
+                                p
+                                | Co-supervisor(s):
+                                =project.cosupervisor
