@@ -3,13 +3,14 @@ mixin publication(publications)
     table
       each publication in publications
         tr
-          th
+          td
             i.fa.fa-trash-o.fa-2x
+          td
             p
               = publication.year
               br
               = publication.month 
-          th
+          td
             p= publication.title
             p= publication.authors
             p= publication.venue
