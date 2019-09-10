@@ -1,0 +1,18 @@
+mixin projet(projectList)
+    ul
+        if projectList[0] != null
+            each project in projectList
+                div
+                    li
+                        p
+                        =project.student
+                        | ,
+                        a(href= "project-" + project._id + ".pug")=project.title
+                        p
+                        | Supervisor:
+                        =project.supervisor
+                        p
+                        | Co-supervisor(s):
+                        =project.cosupervisor
+        else
+            p No publication available
