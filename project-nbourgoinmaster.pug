@@ -1,5 +1,5 @@
 extends layout.pug
-
+include ./mixins/mixin_publication.pug
 block content
     -
         const project = {
@@ -61,4 +61,4 @@ block content
         | Co-supervisor(s):
         =project.cosupervisor
 
-
+        +publication(publications)
