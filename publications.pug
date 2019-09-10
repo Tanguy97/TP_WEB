@@ -1,4 +1,8 @@
--
+extends layout.pug
+
+block content
+
+ -
   const publications = [
     {
       "_id": "5d681f5b3264ae32060d308e",
@@ -8,7 +12,7 @@
       "authors": [
         "Author test",
         "Author test 2"
-      ],
+      ], 
       "venue": "Venue test"
     },
     {
@@ -108,3 +112,30 @@
       "venue": "ESWC-16 Open Knowledge Extraction Challenge, Heraklion, Greece"
     }
   ]
+  
+  
+ section
+    h1= 'Publications'
+    p= 'Sorted by:'
+      select(name="date" size=1)
+        option= 'date'
+    p= 'Order by:'
+      select(name="descending" size=1)
+        option= 'descending'
+    each publication in publications
+      div 
+        input(type="button")
+        p
+          = publication.year
+          br
+          = publication.month
+        p
+          = publication.title
+          br
+          = publication.authors
+          br
+          = publication.venue
+        
+      
+      
+  

@@ -239,10 +239,10 @@ block content
         }
     ]
 
-  div
-    h1  Equipe
+  section
+    h1= 'Team'
     each titre in [['Professors','associateprofessor'],['Research associates','researchassociate'],['PhD students','phdstudent'],['Master students','masterstudent']]
-      div
+      article
         h2= titre[0]
         each member in members
           if member.titles[0].title == titre[1] && member.titles[0].current
@@ -254,11 +254,11 @@ block content
             if titre[0] == 'Professors'
               p= 'Associate professor'
             p= member.emailS
-    div 
-      h2= 'Past members'
+    section 
+      h1= 'Past members'
       each titre in [['PhD students','phdstudent'],['Master students','masterstudent']]
-        div 
-          h3= titre[0]
+        article 
+          h2= titre[0]
           each member in members
             each title in member.titles
               if title.title == titre[1] && !title.current
