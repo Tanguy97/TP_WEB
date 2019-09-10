@@ -2,6 +2,7 @@
 html
     head
         meta(charset="utf-8")
+        link(rel="stylesheet", href="/style.css")
         title Labo Semantic AI
 
 
@@ -17,9 +18,10 @@ html
                     li
                         a(href= pageList[1])= pageList[0]
                 li
-                    select(size=1)
-                        option="FR"
-                        option="EN"
+                        i.fa.fa-caret-down
+                        span FR
+                        br
+                        span EN
         block content
 
 
