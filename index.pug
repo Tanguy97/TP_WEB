@@ -40,14 +40,15 @@ block content
         h1 Nouvelles
 
         each feed in feeds
-            if feed.type == 'seminar'
-                img(src='./img/presentation-icon.png')
-            else if feed.type== 'news'
-                img(src='./img/presentation-icon.png')
-            p=feed.createdAt
-            p
-            | Prochaine séminaire:
-            = feed.title
-            p=feed.presentator
-            p=feed.date
-            p !{feed.location}
+            div
+                if feed.type == 'seminar'
+                    img(src='./img/presentation-icon.png')
+                else if feed.type== 'news'
+                    img(src='./img/presentation-icon.png')
+                p=feed.createdAt
+                p
+                | Prochaine séminaire:
+                = feed.title
+                p=feed.presentator
+                p=feed.date
+                p !{feed.location}
