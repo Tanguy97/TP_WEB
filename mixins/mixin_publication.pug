@@ -1,0 +1,22 @@
+mixin publication(publications)
+  div
+    table
+      each publication in publications
+        tr
+          td
+            i.fa.fa-trash-o.fa-2x
+          td
+            p
+              = publication.year
+              br
+              = publication.month 
+          td
+            p= publication.title
+            p= publication.authors
+            p= publication.venue
+        
+          
+          
+    
+      
+  
