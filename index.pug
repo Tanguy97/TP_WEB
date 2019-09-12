@@ -1,7 +1,7 @@
 extends layout.pug
 
 block content
-
+    link(rel="stylesheet", href="/style.css")
     -
         let feeds = [
         { title: 'Déception machine et Hallucinations profondes d\'Érudits: Pourquoi Repère ? Pourquoi maintenant ?',
@@ -44,7 +44,7 @@ block content
                 if feed.type == 'seminar'
                     img(src='./img/presentation-icon.png')
                 else if feed.type== 'news'
-                    img(src='./img/presentation-icon.png')
+                    i.fa.fa-file-text-o
                 p=feed.createdAt
                 p
                 | Prochaine séminaire:
