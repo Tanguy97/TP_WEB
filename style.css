@@ -1,0 +1,193 @@
+@import "/font-awesome/css/font-awesome.css";
+
+:root {
+    /* Font initial pour tout le site web */
+    --my-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --my-font-size: 14px;
+    --my-font-color: #373a3c;
+
+    /* Couleur pour balises 'a' */
+    --link-text-color: #428bca;
+    --link-active-background-color: #007bff;
+    --link-active-color: #fff;
+
+    /* Font, couleur et taille pour le logo en haut à gauche du site web. */
+    --site-title-family: Georgia, serif;
+    --site-title-size: 25px;
+    --site-title-color: #FF6512;
+    --site-subtitle-size: 12px;
+    --site-subtitle-color: #333;
+    --logo-width: 64px;
+    --logo-height: 64px;
+
+    /*
+     * Barre horizontal de séparation entre le header et le contenu principal et
+     * entre le contenu principal et le footer.
+     */
+    --separator-border-size: 1px;
+    --separator-border-color: #e5e5e5;
+
+    /*
+     * Couleur des liens dans le menu de navigation.
+     */
+    --nav-lang-background-color: #f9f9f9;
+    --nav-lang-background-color-hover: #f1f1f1;
+    --nav-lang-background-color-active: #f1f1f1;
+    --nav-lang-color-active: #373a3c;
+
+    /* Arrière-plan de la description du site web dans la page d'accueil. */
+    --home-description-background-color: #eceeef;
+
+    /* Couleur de la date de publication + une couleur pour l'image produit par font-awesome */
+    --news-post-date-color: #888;
+    --news-icon-color: #bbb;
+
+    /* Couleur et taille d'un membre dans la page d'équipe. */
+    --member-name-size: 1.1rem;
+    --member-title-color: #888;
+    --member-title-size: 0.8rem;
+
+    /* Couleur et taille dans la page de publications */
+    --publication-top-border-color: #eceeef;
+    --publication-delete-icon-color: red;
+    --publication-pagination-link-color: black;
+    --publication-pagination-link-border-color: #ddd;
+    --publication-pagination-link-active-color: white;
+    --publication-pagination-link-active-background-color: #FF6512;
+    --publication-pagination-link-active-border-color: #FF6512;
+    --publication-pagination-link-notactive-hover-background-color: #ddd;
+    --publication-form-text-border-color: #ccc;
+
+    /* Couleur et taille des metadonnées de section du site. */
+    /* P.ex. le footer, les informations d'une publication, les personnes impliquées dans un projet, etc. */
+    --metadata-text-color: #777;
+    --metadata-text-size: .8em;
+}
+
+/*default font*/
+body{
+    font-family:var(--my-font-family);
+    font-size:var(--my-font-size);
+    color:var(--my-font-color);
+    margin-left: 10%;
+    margin-right: 10%;
+}
+#header{
+    display: flex;
+    flex-direction: row;
+    border-bottom-style: solid;
+    border-bottom-color: #e5e5e5;
+    border-bottom-width: var(--separator-border-size);
+    border-width:var(--separator-border-size) ;
+}
+
+#header ~ nav{
+    justify-content: right;
+}
+img#logo{
+    /*position: relative;
+    top: -60px;
+    left: 230px;
+    */
+    width: var( --logo-width);
+    height: var( --logo-height);
+}
+
+#title{
+    color:#FF6512;
+    font-size: 25px;
+    font-family:Georgia, serif;
+}
+#layout{
+    padding-left: 5%;
+    padding-right: 10px;
+    height:80px;
+    font-family:Georgia, serif;
+
+}
+p{
+    margin:0px;
+}
+p.subtitle {
+    font-size: var(--site-subtitle-size);
+    color:var(--site-subtitle-color);
+}
+
+/*barre de navigation*/
+
+#navigation{
+    display: flex;
+    flex-direction: row;
+    justify-content:right;
+    padding-right:12%;
+}
+
+#navigation li{
+    margin: 10px 5px 10px 5px;
+    padding: 10px 5px 10px 5px;
+    width:70px;
+    list-style-type: none;
+    background-color:var(--nav-lang-background-color);
+    border-radius: 10px;
+    text-align: center;
+}
+
+#navigation li a {
+    text-decoration: none;
+}
+
+#navigation :active li {
+    background-color:var(--nav-lang-background-color-active);
+    color:var(--nav-lang-color-active);
+}
+#navigation:hover li{
+    background-color:var(--nav-lang-background-color-hover);
+    color: var(--nav-lang-color-active);
+}
+#navigation:active li{
+    background-color:var(--link-active-background-color);
+    color:var(--link-active-color);
+}
+
+a{
+    color: var(--link-text-color);
+}
+
+footer div{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top-style: solid;
+    border-top-color: #e5e5e5;
+    border-top-width: var(--separator-border-size);
+    border-width:var(--separator-border-size) ;
+    font-size:var(--site-subtitle-size);
+    color:var(--news-icon-color);
+    text-align: center;
+}
+
+footer div p{
+    padding: 5px 5px 5px 5px;
+}
+/*description de homepage*/
+#home_description{
+    background-color:var(--home-description-background-color);
+    margin-top: 35px;
+    padding: 20px 35px 20px 35px;
+}
+
+article .homepage_icon{
+    color:var(--news-icon-color);
+    height: 35px;
+    width:35px;
+    padding: 20px 20px 20px 20px;
+    font-size: 35px;
+}
+
+article .feeds_flex{
+    display: flex;
+    flex-direction: row;
+}
+
+article .feed{
+    padding: 10px 10px 10px 10px;
+}
