@@ -72,6 +72,11 @@ body{
     margin-left: 10%;
     margin-right: 10%;
 }
+
+li {
+  list-style-type: none;
+}
+
 #header{
     display: flex;
     flex-direction: row;
@@ -127,7 +132,6 @@ p.subtitle {
     margin: 10px 5px 10px 5px;
     padding: 10px 5px 10px 5px;
     width:70px;
-    list-style-type: none;
     background-color:var(--nav-lang-background-color);
     border-radius: 10px;
     text-align: center;
@@ -141,8 +145,8 @@ p.subtitle {
     background-color:var(--nav-lang-background-color-active);
     color:var(--nav-lang-color-active);
 }
-#navigation li :hover{
-    
+#navigation li:hover{
+
     background-color:var(--nav-lang-background-color-hover);
     color: var(--nav-lang-color-active);
 }
@@ -192,4 +196,62 @@ article .feeds_flex{
 
 article .feed{
     padding: 10px 10px 10px 10px;
+}
+
+/* CSS pour la page team.pug */
+
+ul.team{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 130px auto;
+}
+
+
+div#pastmember {
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+}
+
+div#pastmember p{
+  text-align: center;
+}
+
+div#pastmember ul{
+  padding: 0px;
+}
+
+.profile{
+  overflow:hidden;
+  -webkit-border-radius:50px;
+  -moz-border-radius:50px;
+  border-radius:50px;
+  width:70px;
+  height:70px;
+  grid-column: 1/2;
+  grid-row: 1/4;
+}
+
+.name{
+  font-size: var(--member-name-size);
+  font-weight: bold;
+}
+
+.title{
+  color: var(--member-title-color);
+  font-size: var(--member-title-size);
+}
+
+.email{
+  color: #428bca;
+}
+
+p#associateprofessor{
+  color: #428bca;
+}
+
+.people{
+  display: grid;
+  grid-template-columns: 85px auto;
+  grid-template-rows: 35px 15px auto;
 }

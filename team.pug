@@ -244,27 +244,28 @@ block content
     each titre in [['Professors','associateprofessor'],['Research associates','researchassociate'],['PhD students','phdstudent'],['Master students','masterstudent']]
       article
         h2= titre[0]
-        ul
+        ul.team
           each member in members
             if member.titles[0].title == titre[1] && member.titles[0].current
-              li
+              li.people
                 if member.image == null
-                  img(src='img/unknown.png')
+                  i.fa.fa-user-circle.fa-5x.img-circle(class="profile")
                 else
-                  img(src=member.image)
-                p= member.firstname + " " + member.lastname
+                  img(src=member.image).profile
+                p(id=titre[1]).name= member.firstname + " " + member.lastname
                 if titre[0] == 'Professors'
-                  p= 'Associate professor'
-                p= member.emailS
-    section 
+                  p.title= 'Associate professor'
+                p.email= member.email
+    section
       h1= 'Past members'
-      each titre in [['PhD students','phdstudent'],['Master students','masterstudent']]
-        article 
-          h2= titre[0]
-          ul
-            each member in members
-              each title in member.titles
-                if title.title == titre[1] && !title.current
-                  li
-                    p= member.firstname + " " + member.lastname
+      div#pastmember
+        each titre in [['PhD students','phdstudent'],['Master students','masterstudent']]
+          article
+            h2= titre[0]
+            ul
+              each member in members
+                each title in member.titles
+                  if title.title == titre[1] && !title.current
+                    li
+                      p= member.firstname + " " + member.lastname
                                 
