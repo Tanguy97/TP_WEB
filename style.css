@@ -75,6 +75,7 @@ body{
 #header{
     display: flex;
     flex-direction: row;
+
     border-bottom-style: solid;
     border-bottom-color: #e5e5e5;
     border-bottom-width: var(--separator-border-size);
@@ -136,15 +137,15 @@ p.subtitle {
     text-decoration: none;
 }
 
-#navigation :active li {
+#navigation  li:active{
     background-color:var(--nav-lang-background-color-active);
     color:var(--nav-lang-color-active);
 }
-#navigation:hover li{
+#navigation li :hover{
     background-color:var(--nav-lang-background-color-hover);
     color: var(--nav-lang-color-active);
 }
-#navigation:active li{
+#navigation li:active{
     background-color:var(--link-active-background-color);
     color:var(--link-active-color);
 }
