@@ -142,6 +142,7 @@ p.subtitle {
     color:var(--nav-lang-color-active);
 }
 #navigation li :hover{
+    
     background-color:var(--nav-lang-background-color-hover);
     color: var(--nav-lang-color-active);
 }
