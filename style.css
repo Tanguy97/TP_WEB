@@ -71,6 +71,16 @@ body{
     color:var(--my-font-color);
     margin-left: 10%;
     margin-right: 10%;
+
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: 2.5rem;    /* Footer height */
 }
 
 li {
@@ -80,8 +90,8 @@ li {
 #header{
     display: flex;
     flex-direction: row;
-
     border-bottom-style: solid;
+    justify-content: space-between;
     border-bottom-color: #e5e5e5;
     border-bottom-width: var(--separator-border-size);
     border-width:var(--separator-border-size) ;
@@ -89,6 +99,24 @@ li {
 
 #header ~ nav{
     justify-content: right;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    border-top-style: solid;
+    border-top-color: #e5e5e5;
+    border-top-width: var(--separator-border-size);
+    border-width:var(--separator-border-size) ;
+    font-size:var(--metadata-text-size);
+    color:var(--metadata-text-color);
+    text-align: center;
+}
+
+footer div p{
+    padding: 5px 5px 5px 5px;
 }
 img#logo{
     /*position: relative;
@@ -103,12 +131,18 @@ img#logo{
     color:#FF6512;
     font-size: 25px;
     font-family:Georgia, serif;
+    width: 226px;
 }
 #layout{
     padding-left: 5%;
     padding-right: 10px;
     height:80px;
     font-family:Georgia, serif;
+}
+
+#layout_wrapper{
+    display: flex;
+    flex-direction: row;
 
 }
 p{
@@ -125,16 +159,21 @@ p.subtitle {
     display: flex;
     flex-direction: row;
     justify-content:right;
-    padding-right:12%;
 }
 
 #navigation li{
     margin: 10px 5px 10px 5px;
-    padding: 10px 5px 10px 5px;
-    width:70px;
-    background-color:var(--nav-lang-background-color);
+    padding: 10px;
     border-radius: 10px;
-    text-align: center;
+    align-self: center;
+}
+/*button navigation de page index"*/
+#navigation li:first-child{
+     background:var(--link-active-background-color);
+ }
+
+#navigation li:first-child a{
+    color:var(--nav-lang-background-color);
 }
 
 #navigation li a {
@@ -146,7 +185,6 @@ p.subtitle {
     color:var(--nav-lang-color-active);
 }
 #navigation li:hover{
-
     background-color:var(--nav-lang-background-color-hover);
     color: var(--nav-lang-color-active);
 }
@@ -154,26 +192,44 @@ p.subtitle {
     background-color:var(--link-active-background-color);
     color:var(--link-active-color);
 }
-
-a{
+#language_switch{
+    width: 50px;
+    margin: 10px 5px 10px 5px;
+    padding: 10px 5px 10px 5px;
+    align-self: center;
     color: var(--link-text-color);
 }
 
-footer div{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-top-style: solid;
-    border-top-color: #e5e5e5;
-    border-top-width: var(--separator-border-size);
-    border-width:var(--separator-border-size) ;
-    font-size:var(--site-subtitle-size);
-    color:var(--news-icon-color);
-    text-align: center;
+#language_tab{
+    display:none;
 }
 
-footer div p{
-    padding: 5px 5px 5px 5px;
+#language_tab:hover{
+    display:block;
+    position: relative;
+    top: 60px;
+    width: 60px;
+    right: 70px;
+    background: var(--nav-lang-background-color);
+    border-radius: 0px;
+    align-self: center;
 }
+
+#language_tab div{
+    padding:10px;
+}
+#language_tab div:hover{
+    background-color:var(--nav-lang-background-color-hover);
+}
+#language_tab:hover{
+    display: block;
+}
+a{
+    color: var(--link-text-color);
+    text-decoration: none;
+}
+
+
 /*description de homepage*/
 #home_description{
     background-color:var(--home-description-background-color);
@@ -181,13 +237,21 @@ footer div p{
     padding: 20px 35px 20px 35px;
 }
 
-article .homepage_icon{
+article i.homepage_icon{
     color:var(--news-icon-color);
+    padding: 20px 20px 20px 20px;
+    font-size: 35px;
+    height: 35px;
+    width:35px;
+}
+
+article img.homepage_icon{
+    opacity: 0.27;
     height: 35px;
     width:35px;
     padding: 20px 20px 20px 20px;
-    font-size: 35px;
 }
+
 
 article .feeds_flex{
     display: flex;
@@ -197,6 +261,7 @@ article .feeds_flex{
 article .feed{
     padding: 10px 10px 10px 10px;
 }
+
 
 /* CSS pour la page team.pug */
 
@@ -254,4 +319,22 @@ p#associateprofessor{
   display: grid;
   grid-template-columns: 85px auto;
   grid-template-rows: 35px 15px auto;
+}
+
+#project{
+    padding-bottom: 10px;
+}
+
+p.small{
+    color:var(--metadata-text-color);
+    font-size:var(--metadata-text-size);
+}
+
+.paragraph-spacing{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#delete_icon{
+    color:var(--publication-delete-icon-color);
 }

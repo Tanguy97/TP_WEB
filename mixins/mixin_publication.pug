@@ -4,7 +4,7 @@ mixin publication(publications)
       each publication in publications
         tr
           td
-            i.fa.fa-trash-o.fa-2x
+            i(id="delete_icon").fa.fa-trash-o.fa-2x
           td
             p
               = publication.year
@@ -13,7 +13,7 @@ mixin publication(publications)
           td
             p= publication.title
             p= publication.authors
-            p= publication.venue
+            p(class="small")= publication.venue
         
           
           

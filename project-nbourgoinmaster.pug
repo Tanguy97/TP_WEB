@@ -51,14 +51,11 @@ block content
       ]
     h1=project.title
     div
-        p
-        |Student:
-        =project.student
-        p
-        | Supervisor:
-        =project.supervisor
-        p
-        | Co-supervisor(s):
-        =project.cosupervisor
+        p(class="small") Student:
+            =project.student
+        p(class="small") Supervisor:
+            =project.supervisor
+        p(class="small") Co-supervisor(s):
+            =project.cosupervisor
 
         +publication(publications)
