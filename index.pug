@@ -44,7 +44,7 @@ block content
                         div
                             img(class ="homepage_icon",src='./img/presentation-icon.png')
                         div(class="feed")
-                            p=feed.createdAt
+                            p(class="new_post_date")=feed.createdAt
                             p
                             | Prochaine séminaire:
                             = feed.title

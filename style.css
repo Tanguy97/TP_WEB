@@ -65,10 +65,10 @@
 }
 
 /*default font*/
-body{
-    font-family:var(--my-font-family);
-    font-size:var(--my-font-size);
-    color:var(--my-font-color);
+body {
+    font-family: var(--my-font-family);
+    font-size: var(--my-font-size);
+    color: var(--my-font-color);
     margin-left: 10%;
     margin-right: 10%;
 
@@ -80,24 +80,24 @@ body{
 }
 
 #content-wrap {
-    padding-bottom: 2.5rem;    /* Footer height */
+    padding-bottom: 2.5rem; /* Footer height */
 }
 
 li {
-  list-style-type: none;
+    list-style-type: none;
 }
 
-#header{
+#header {
     display: flex;
     flex-direction: row;
     border-bottom-style: solid;
     justify-content: space-between;
     border-bottom-color: #e5e5e5;
     border-bottom-width: var(--separator-border-size);
-    border-width:var(--separator-border-size) ;
+    border-width: var(--separator-border-size);
 }
 
-#header ~ nav{
+#header ~ nav {
     justify-content: right;
 }
 
@@ -108,91 +108,97 @@ footer {
     height: 2.5rem;
     border-top-style: solid;
     border-top-color: #e5e5e5;
-    border-top-width: var(--separator-border-size);
-    border-width:var(--separator-border-size) ;
-    font-size:var(--metadata-text-size);
-    color:var(--metadata-text-color);
+    border-width: var(--separator-border-size);
+    font-size: var(--metadata-text-size);
+    color: var(--metadata-text-color);
     text-align: center;
 }
 
-footer div p{
+footer div p {
     padding: 5px 5px 5px 5px;
 }
-img#logo{
+
+img#logo {
     /*position: relative;
     top: -60px;
     left: 230px;
     */
-    width: var( --logo-width);
-    height: var( --logo-height);
+    width: var(--logo-width);
+    height: var(--logo-height);
 }
 
-#title{
-    color:#FF6512;
+#title {
+    color: #FF6512;
     font-size: 25px;
-    font-family:Georgia, serif;
+    font-family: Georgia, serif;
     width: 226px;
 }
-#layout{
+
+#layout {
     padding-left: 5%;
     padding-right: 10px;
-    height:80px;
-    font-family:Georgia, serif;
+    height: 80px;
+    font-family: Georgia, serif;
 }
 
-#layout_wrapper{
+#layout_wrapper {
     display: flex;
     flex-direction: row;
 
 }
-p{
-    margin:0px;
+
+p {
+    margin: 0px;
 }
+
 p.subtitle {
     font-size: var(--site-subtitle-size);
-    color:var(--site-subtitle-color);
+    color: var(--site-subtitle-color);
 }
 
 /*barre de navigation*/
 
-#navigation{
+#navigation {
     display: flex;
     flex-direction: row;
-    justify-content:right;
+    justify-content: right;
 }
 
-#navigation li{
+#navigation li {
     margin: 10px 5px 10px 5px;
     padding: 10px;
     border-radius: 10px;
     align-self: center;
 }
-/*button navigation de page index"*/
-#navigation li:first-child{
-     background:var(--link-active-background-color);
- }
 
-#navigation li:first-child a{
-    color:var(--nav-lang-background-color);
+/*button navigation de page index"*/
+#navigation li:first-child {
+    background: var(--link-active-background-color);
+}
+
+#navigation li:first-child a {
+    color: var(--nav-lang-background-color);
 }
 
 #navigation li a {
     text-decoration: none;
 }
 
-#navigation  li:active{
+/*#navigation  li:active{
     background-color:var(--nav-lang-background-color-active);
     color:var(--nav-lang-color-active);
-}
-#navigation li:hover{
-    background-color:var(--nav-lang-background-color-hover);
+}*/
+#navigation li:hover:nth-child(n+2) {
+    background-color: var(--nav-lang-background-color-hover);
     color: var(--nav-lang-color-active);
 }
-#navigation li:active{
-    background-color:var(--link-active-background-color);
-    color:var(--link-active-color);
+
+#navigation li:active:nth-child(n+2) {
+    background-color: var(--link-active-background-color);
+    color: var(--link-active-color);
 }
-#language_switch{
+
+#language_switch {
     width: 50px;
     margin: 10px 5px 10px 5px;
     padding: 10px 5px 10px 5px;
@@ -200,12 +206,12 @@ p.subtitle {
     color: var(--link-text-color);
 }
 
-#language_tab{
-    display:none;
+#language_tab {
+    display: none;
 }
 
-#language_tab:hover{
-    display:block;
+#language_tab:hover {
+    display: block;
     position: relative;
     top: 60px;
     width: 60px;
@@ -215,126 +221,159 @@ p.subtitle {
     align-self: center;
 }
 
-#language_tab div{
-    padding:10px;
+#language_tab div {
+    padding: 10px;
 }
-#language_tab div:hover{
-    background-color:var(--nav-lang-background-color-hover);
+
+#language_tab div:hover {
+    background-color: var(--nav-lang-background-color-hover);
 }
-#language_tab:hover{
+
+#language_tab:hover {
     display: block;
 }
-a{
+
+a {
     color: var(--link-text-color);
     text-decoration: none;
 }
 
-
 /*description de homepage*/
-#home_description{
-    background-color:var(--home-description-background-color);
+#home_description {
+    background-color: var(--home-description-background-color);
     margin-top: 35px;
     padding: 20px 35px 20px 35px;
 }
 
-article i.homepage_icon{
-    color:var(--news-icon-color);
+.new_post_date {
+    color: var(--news-post-date-color);
+    font-size: .9em;
+}
+
+article i.homepage_icon {
+    color: var(--news-icon-color);
     padding: 20px 20px 20px 20px;
     font-size: 35px;
     height: 35px;
-    width:35px;
+    width: 35px;
 }
 
-article img.homepage_icon{
+article img.homepage_icon {
     opacity: 0.27;
     height: 35px;
-    width:35px;
+    width: 35px;
     padding: 20px 20px 20px 20px;
 }
 
-
-article .feeds_flex{
+article .feeds_flex {
     display: flex;
     flex-direction: row;
 }
 
-article .feed{
+article .feed {
     padding: 10px 10px 10px 10px;
 }
 
-
 /* CSS pour la page team.pug */
 
-ul.team{
+ul.team {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: 130px auto;
 }
 
-
 div#pastmember {
-  display: flex;
-  flex-direction:row;
-  justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-div#pastmember p{
-  text-align: center;
+div#pastmember p {
+    text-align: center;
 }
 
-div#pastmember ul{
-  padding: 0px;
+div#pastmember ul {
+    padding: 0px;
 }
 
-.profile{
-  overflow:hidden;
-  -webkit-border-radius:50px;
-  -moz-border-radius:50px;
-  border-radius:50px;
-  width:70px;
-  height:70px;
-  grid-column: 1/2;
-  grid-row: 1/4;
+.profile {
+    overflow: hidden;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    width: 70px;
+    height: 70px;
+    grid-column: 1/2;
+    grid-row: 1/4;
 }
 
-.name{
-  font-size: var(--member-name-size);
-  font-weight: bold;
+.name {
+    font-size: var(--member-name-size);
+    font-weight: bold;
 }
 
-.title{
-  color: var(--member-title-color);
-  font-size: var(--member-title-size);
+.title {
+    color: var(--member-title-color);
+    font-size: var(--member-title-size);
 }
 
-.email{
-  color: #428bca;
+.email {
+    color: #428bca;
 }
 
-p#associateprofessor{
-  color: #428bca;
+p#associateprofessor {
+    color: #428bca;
 }
 
-.people{
-  display: grid;
-  grid-template-columns: 85px auto;
-  grid-template-rows: 35px 15px auto;
+.people {
+    display: grid;
+    grid-template-columns: 85px auto;
+    grid-template-rows: 35px 15px auto;
 }
 
-#project{
+/*la page de projet*/
+#project {
     padding-bottom: 10px;
 }
 
-p.small{
-    color:var(--metadata-text-color);
-    font-size:var(--metadata-text-size);
+p.small {
+    color: var(--metadata-text-color);
+    font-size: var(--metadata-text-size);
 }
 
-.paragraph-spacing{
+.paragraph-spacing {
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-#delete_icon{
-    color:var(--publication-delete-icon-color);
+/*la page de publication*/
+#publication #delete_icon {
+    color: var(--publication-delete-icon-color);
+    font-size: 30px;
+    padding: 10px;
+    margin-bottom: 1px
+}
+
+table .venue {
+    font-style: italic;
+    color: var(--metadata-text-color);
+}
+
+#publication_table_row td {
+    border-top: 1px solid var(--publication-form-text-border-color);
+    padding: 10px;
+}
+
+#publication {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#publication_date {
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+#publication .year {
+    font-weight: bold;
 }
