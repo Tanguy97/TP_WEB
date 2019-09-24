@@ -252,10 +252,13 @@ block content
                   i.fa.fa-user-circle.fa-5x.img-circle(class="profile")
                 else
                   img(src=member.image).profile
-                p(id=titre[1]).name= member.firstname + " " + member.lastname
-                if titre[0] == 'Professors'
-                  p.title= 'Associate professor'
-                p.email= member.email
+                if member.email != null
+                    p(id=titre[1]).name= member.firstname + " " + member.lastname
+                    if titre[0] == 'Professors'
+                      p.title= 'Associate professor'
+                    p.email= member.email
+                else 
+                    p(id=titre[1]).name2= member.firstname + " " + member.lastname
     section
       h1= 'Past members'
       div#pastmember

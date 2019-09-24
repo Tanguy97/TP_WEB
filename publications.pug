@@ -171,19 +171,21 @@ block content
                 option= 'descending'
 
         +publication(publications)
-        div
-            table
-                tr
-                    td
-                        a(href='#')= '<<'
-                    td
+        div.res
+            div
+                ul
+                    li
+                        p= '<<'
+                    li#current
                         p= '1'
-                    td
+                    li
                         p='2'
-                    td
+                    li
                         p='3'
-                    td
-                        a(href='#')='>>'
+                    li
+                        p='4'
+                    li
+                        p='>>'
             p
                 ='Afficher'
                 select(size=1)
