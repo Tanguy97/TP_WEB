@@ -184,19 +184,19 @@ p.subtitle {
     text-decoration: none;
 }
 
-/*#navigation  li:active{
-    background-color:var(--nav-lang-background-color-active);
-    color:var(--nav-lang-color-active);
-}*/
-#navigation li:hover:nth-child(n+2) {
+#navigation .page:nth-child(n+2):hover{
     background-color: var(--nav-lang-background-color-hover);
-    color: var(--nav-lang-color-active);
 }
 
-#navigation li:active:nth-child(n+2) {
+#navigation .page:nth-child(n+2):active{
     background-color: var(--link-active-background-color);
-    color: var(--link-active-color);
 }
+
+#navigation .page:nth-child(n+2) a:active{
+    color: var(--nav-lang-background-color);
+}
+
+
 
 #language_switch {
     width: 50px;
@@ -346,7 +346,7 @@ p.small {
     margin-bottom: 10px;
 }
 
-/*la page de publication*/
+/*mixin publication*/
 #publication #delete_icon {
     color: var(--publication-delete-icon-color);
     font-size: 30px;
@@ -376,4 +376,73 @@ table .venue {
 
 #publication .year {
     font-weight: bold;
+}
+
+/*Publication-form*/
+div.publication-form{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px 10px 0px;
+}
+
+.input{
+    border: 1px solid var(--publication-form-text-border-color);
+    border-radius: 5px;
+    height:30px;
+}
+
+#popup .input{
+    width: 100%;
+}
+button  {
+    margin-top: 10px;
+    padding:5px 20px 5px 20px;
+    border: 1px solid var(--publication-form-text-border-color);
+    border-radius: 5px;
+}
+
+form label{
+    padding-bottom: 5px;
+}
+
+#form-popup{
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 60%;
+    position: relative;
+}
+
+.close-button{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color:black;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+#button-create-publication{
+    position: absolute;
+    top: 110px;
+    right: 120px;
+}
+
+.sort-publication{
+    padding:5px 0px 5px 0px;
 }
