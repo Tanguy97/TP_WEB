@@ -72,7 +72,6 @@ body {
     color: var(--my-font-color);
     margin-left: 10%;
     margin-right: 10%;
-
 }
 
 #page-container {
@@ -210,6 +209,7 @@ p.subtitle {
     background: var(--nav-lang-background-color-hover);
     opacity: 1;
     margin-top: 10px;
+    z-index: 1;
 }
 
 #language_tab:hover {
@@ -384,9 +384,7 @@ table .venue {
 
 #publication_date {
     padding-left: 10px;
-    padding-right: 20px;.
-.num{
-}
+    padding-right: 20px;
 }
 
 #publication .year {
