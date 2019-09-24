@@ -93,7 +93,7 @@ li {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border:solid #e5e5e5  var(--separator-border-size);
+    border-bottom: solid #e5e5e5  var(--separator-border-size);
 }
 
 #header ~ nav {
