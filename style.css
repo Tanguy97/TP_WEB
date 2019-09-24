@@ -403,9 +403,9 @@ table .venue {
 }
 
 .res li{
-    border: thin solid;
+    border: 1px solid var(--publication-form-text-border-color);
     margin: 5px;
-    width:16px;
+    width:24px;
     height: 16px;
     padding: 5px;
     text-align: center;
@@ -413,6 +413,10 @@ table .venue {
 
 li#current{
     background-color: var(--site-title-color)
+}
+
+li#current p{
+    color: white;
 }
 /*Publication-form*/
 div.publication-form{
