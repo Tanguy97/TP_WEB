@@ -64,7 +64,8 @@
     --metadata-text-size: .8em;
 }
 
-/*default font*/
+/* Default font */
+
 body {
     font-family: var(--my-font-family);
     font-size: var(--my-font-size);
@@ -119,10 +120,6 @@ footer div p {
 }
 
 img#logo {
-    /*position: relative;
-    top: -60px;
-    left: 230px;
-    */
     width: var(--logo-width);
     height: var(--logo-height);
     padding-left: 5%;
@@ -157,7 +154,7 @@ p.subtitle {
     color: var(--site-subtitle-color);
 }
 
-/*barre de navigation*/
+/* barre de navigation */
 
 #navigation {
     display: flex;
@@ -172,7 +169,8 @@ p.subtitle {
     align-self: center;
 }
 
-/*button navigation de page index"*/
+/* button navigation de page index */
+
 #navigation li:first-child {
     background: var(--link-active-background-color);
 }
@@ -239,7 +237,8 @@ a {
     text-decoration: none;
 }
 
-/*description de homepage*/
+/* Description de homepage */
+
 #home_description {
     background-color: var(--home-description-background-color);
     margin-top: 35px;
@@ -339,7 +338,8 @@ p#associateprofessor {
     grid-template-rows: 35px 15px auto;
 }
 
-/*la page de projet*/
+/* La page de projet */
+
 #project {
     padding-bottom: 10px;
 }
@@ -354,7 +354,8 @@ p.small {
     margin-bottom: 10px;
 }
 
-/*mixin publication*/
+/* Mixin publication */
+
 #publication #delete_icon {
     color: var(--publication-delete-icon-color);
     font-size: 30px;
@@ -418,7 +419,9 @@ li#current{
 li#current p{
     color: white;
 }
+
 /*Publication-form*/
+
 div.publication-form{
     display: flex;
     flex-direction: column;
