@@ -3,192 +3,191 @@ include mixins/mixin_publication.pug
 
 block content
 
-    -
-        const publications = [
-        {
-        "_id": "5d681f5b3264ae32060d308e",
-        "year": 2020,
-        "month": "mai",
-        "title": "Title test",
-        "authors": [
-        "Author test",
-        "Author test 2"
-        ],
-        "venue": "Venue test"
-        },
-        {
-        "_id": "5d67d442a5c77bebf633a11f",
-        "year": 2018,
-        "month": "juin",
-        "authors": [
-        "Leonard Bourgoin",
-        "Alphonsine Beauchamps",
-        "Michel Deslauriers"
-        ],
-        "title": "LAMA: a language adaptive method for question answering",
-        "venue": "Scalable Question Answering over Linked Data Challenge (SQA2018), Heraklion, Greece"
-        },
-        {
-        "_id": "5d67d442a5c77bebf633a11c",
-        "year": 2018,
-        "month": "mai",
-        "authors": [
-        "Simoneau Fleurilius",
-        "Alphonsine Beauchamps",
-        "Michel Deslauriers",
-        "Michel Jean"
-        ],
-        "title": "A Machine Learning Filter for the Slot Filling Task",
-        "venue": "Information 2018, 9(6), 133"
-        },
-        {
-        "_id": "5d67d442a5c77bebf633a11d",
-        "year": 2018,
-        "month": "janvier",
-        "authors": [
-        "Patrick Anderson",
-        "Michel Deslauriers",
-        "Alphonsine Beauchamps"
-        ],
-        "title": "FICLONE: Improving DBpedia Spotlight Using Named Entity Recognition and Collective Disambiguation",
-        "venue": "Open Journal of Semantic Web (OJSW) 5.1 (2018): 12-28."
-        },
-        {
-        "_id": "5d67d442a5c77bebf633a120",
-        "year": 2017,
-        "month": "novembre",
-        "authors": [
-        "Alphonsine Beauchamps",
-        "Michel Deslauriers",
-        "Michel Jean"
-        ],
-        "title": "An assessment of open relation extraction systems for the semantic web",
-        "venue": "Information Systems, Volume 71, p. 228-239"
-        },
-        {
-        "_id": "5d67d442a5c77bebf633a122",
-        "year": 2017,
-        "month": "octobre",
-        "authors": [
-        "Leonard Bourgoin",
-        "Michel Deslauriers",
-        "Alphonsine Beauchamps"
-        ],
-        "title": "AMAL: Answering French Natural Language Questions using DBpedia",
-        "venue": "ESWC 2017 Semantic Web Challenges, Springer"
-        },
-        {
-        "_id": "5d67d442a5c77bebf633a123",
-        "year": 2017,
-        "month": "janvier",
-        "authors": [
-        "Christophe Deniger",
-        "Alphonsine Beauchamps",
-        "Michel Deslauriers"
-        ],
-        "title": "Assessing and Improving Domain Knowledge Representation in DBpedia",
-        "venue": "Open Journal of Semantic Web (OJSW), 4(1) : p. 1-19"
-        },
-        {
-        "_id": "5d67d442a5c77bebf633a121",
-        "year": 2017,
-        "authors": [
-        "Leonard Bourgoin",
-        "Michel Deslauriers",
-        "Alphonsine Beauchamps"
-        ],
-        "title": "Answering Natural Language Questions on RDF Knowledge base in French",
-        "venue": "Question Answering over Linked Data Challenge. (1st place of QALD 2017 – Question answering in French)"
-        },
-        {
-        "_id": "5d67d442a5c77bebf633a125",
-        "year": 2016,
-        "month": "juillet",
-        "authors": [
-        "Joey Gelinas",
-        "Alphonsine Beauchamps",
-        "Michel Deslauriers"
-        ],
-        "title": "Automatic Extraction of Axioms from Wikipedia Using SPARQL",
-        "venue": "ESWC-16 Open Knowledge Extraction Challenge, Heraklion, Greece"
-        }
-        ]
+	-
+		const publications = [
+		{
+		"_id": "5d681f5b3264ae32060d308e",
+		"year": 2020,
+		"month": "mai",
+		"title": "Title test",
+		"authors": [
+		"Author test",
+		"Author test 2"
+		],
+		"venue": "Venue test"
+		},
+		{
+		"_id": "5d67d442a5c77bebf633a11f",
+		"year": 2018,
+		"month": "juin",
+		"authors": [
+		"Leonard Bourgoin",
+		"Alphonsine Beauchamps",
+		"Michel Deslauriers"
+		],
+		"title": "LAMA: a language adaptive method for question answering",
+		"venue": "Scalable Question Answering over Linked Data Challenge (SQA2018), Heraklion, Greece"
+		},
+		{
+		"_id": "5d67d442a5c77bebf633a11c",
+		"year": 2018,
+		"month": "mai",
+		"authors": [
+		"Simoneau Fleurilius",
+		"Alphonsine Beauchamps",
+		"Michel Deslauriers",
+		"Michel Jean"
+		],
+		"title": "A Machine Learning Filter for the Slot Filling Task",
+		"venue": "Information 2018, 9(6), 133"
+		},
+		{
+		"_id": "5d67d442a5c77bebf633a11d",
+		"year": 2018,
+		"month": "janvier",
+		"authors": [
+		"Patrick Anderson",
+		"Michel Deslauriers",
+		"Alphonsine Beauchamps"
+		],
+		"title": "FICLONE: Improving DBpedia Spotlight Using Named Entity Recognition and Collective Disambiguation",
+		"venue": "Open Journal of Semantic Web (OJSW) 5.1 (2018): 12-28."
+		},
+		{
+		"_id": "5d67d442a5c77bebf633a120",
+		"year": 2017,
+		"month": "novembre",
+		"authors": [
+		"Alphonsine Beauchamps",
+		"Michel Deslauriers",
+		"Michel Jean"
+		],
+		"title": "An assessment of open relation extraction systems for the semantic web",
+		"venue": "Information Systems, Volume 71, p. 228-239"
+		},
+		{
+		"_id": "5d67d442a5c77bebf633a122",
+		"year": 2017,
+		"month": "octobre",
+		"authors": [
+		"Leonard Bourgoin",
+		"Michel Deslauriers",
+		"Alphonsine Beauchamps"
+		],
+		"title": "AMAL: Answering French Natural Language Questions using DBpedia",
+		"venue": "ESWC 2017 Semantic Web Challenges, Springer"
+		},
+		{
+		"_id": "5d67d442a5c77bebf633a123",
+		"year": 2017,
+		"month": "janvier",
+		"authors": [
+		"Christophe Deniger",
+		"Alphonsine Beauchamps",
+		"Michel Deslauriers"
+		],
+		"title": "Assessing and Improving Domain Knowledge Representation in DBpedia",
+		"venue": "Open Journal of Semantic Web (OJSW), 4(1) : p. 1-19"
+		},
+		{
+		"_id": "5d67d442a5c77bebf633a121",
+		"year": 2017,
+		"authors": [
+		"Leonard Bourgoin",
+		"Michel Deslauriers",
+		"Alphonsine Beauchamps"
+		],
+		"title": "Answering Natural Language Questions on RDF Knowledge base in French",
+		"venue": "Question Answering over Linked Data Challenge. (1st place of QALD 2017 – Question answering in French)"
+		},
+		{
+		"_id": "5d67d442a5c77bebf633a125",
+		"year": 2016,
+		"month": "juillet",
+		"authors": [
+		"Joey Gelinas",
+		"Alphonsine Beauchamps",
+		"Michel Deslauriers"
+		],
+		"title": "Automatic Extraction of Axioms from Wikipedia Using SPARQL",
+		"venue": "ESWC-16 Open Knowledge Extraction Challenge, Heraklion, Greece"
+		}
+		]
 
 
-    section
+	section
 
-        a(id ="button-create-publication" href="#popup")
-            button Ajouter une publication
+		a(id ="button-create-publication" href="#popup")
+			button Ajouter une publication
 
-        div(id="popup" class="overlay")
-            div(id="form-popup")
-                a(class="close-button" href="#")
-                    buttoni.fa.fa-window-close.fa-2x.close-button
-                h2 Création une publication
-                form(method='POST')
-                    div(class="publication-form")
-                        Label Année:
-                        input(class="input" type="number" name="year" size=1 min="1900" max="2099")
+		div(id="popup" class="overlay")
+			div(id="form-popup")
+				a(class="close-button" href="#")
+					buttoni.fa.fa-window-close.fa-2x.close-button
+				h2 Création une publication
+				form(method='POST')
+					div(class="publication-form")
+						Label Année:
+						input(class="input" type="number" name="year" size=1 min="1900" max="2099")
 
-                    div(class="publication-form")
-                        Label Mois:
-                        select(class="input" name="date" size=1)
-                            option='Janvier'
-                            option='Février'
-                            option='Mars'
-                            option='Avril'
-                            option='Mai'
-                            option='Juin'
-                            option='Juillet'
-                            option= 'Août'
-                            option='Septembre'
-                            option= 'Octobre'
-                            option='Novembre'
-                            option='Décembre'
+					div(class="publication-form")
+						Label Mois:
+						select(class="input" name="date" size=1)
+							option='Janvier'
+							option='Février'
+							option='Mars'
+							option='Avril'
+							option='Mai'
+							option='Juin'
+							option='Juillet'
+							option= 'Août'
+							option='Septembre'
+							option= 'Octobre'
+							option='Novembre'
+							option='Décembre'
 
-                    div(class="publication-form")
-                        Label Titre:
-                        input(class="input",type='text', name='title', value='Titre test')
-                    div(class="publication-form")
-                        Label Auteur:
-                        input(class="input",type='text', name='Auteur', value='Auteur test')
-                    i.fa.fa-plus.fa-3x
-                    div(class="publication-form")
-                        Label Conférence:
-                        input(class="input",type='text', name='Conférence' Value='Venue test')
-                    Button(type='submit') Créer
+					div(class="publication-form")
+						Label Titre:
+						input(class="input",type='text', name='title', value='Titre test')
+					div(class="publication-form")
+						Label Auteur:
+						input(class="input",type='text', name='Auteur', value='Auteur test')
+					i.fa.fa-plus.fa-3x
+					div(class="publication-form")
+						Label Conférence:
+						input(class="input",type='text', name='Conférence' Value='Venue test')
+					Button(type='submit') Créer
 
-        h1= 'Publications'
+		h1= 'Publications'
 
-        div(class="sort-publication")
-            span= 'Sorted by:'
-            select(class="input" name="date" size=1)
-                option= 'date'
+		div(class="sort-publication")
+			span= 'Sorted by:'
+			select(class="input" name="date" size=1)
+				option= 'date'
 
-        div(class="sort-publication")
-            span= 'Order by:'
-            select(class="input" name="descending" size=1)
-                option= 'descending'
+		div(class="sort-publication")
+			span= 'Order by:'
+			select(class="input" name="descending" size=1)
+				option= 'descending'
 
-        +publication(publications)
-        div.res
-            div
-                ul
-                    li
-                        p= '<<'
-                    li#current
-                        p= '1'
-                    li
-                        p='2'
-                    li
-                        p='3'
-                    li
-                        p='4'
-                    li
-                        p='>>'
-            p
-                ='Afficher'
-                select(size=1)
-                    option='10'
-                ='résultats par page'
-  
+		+publication(publications)
+		div.res
+			div
+				ul
+					li
+						p= '<<'
+					li#current
+						p= '1'
+					li
+						p='2'
+					li
+						p='3'
+					li
+						p='4'
+					li
+						p='>>'
+			p
+				='Afficher'
+				select(size=1)
+					option='10'
+				='résultats par page'
