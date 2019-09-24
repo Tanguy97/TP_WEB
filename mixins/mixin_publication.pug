@@ -1,22 +1,16 @@
 mixin publication(publications)
-  div(id="publication")
-      table
-          each publication in publications
-              tr(id="publication_table_row")
-                  td
-                      i(id="delete_icon").fa.fa-trash-o.fa-2x
-                  td(id="publication_date")
-                      p(class="year")
-                          = publication.year
-                      p
-                          = publication.month
-                  td
-                      p= publication.title
-                      p= publication.authors
-                      p(class="venue")= publication.venue
-
-          
-          
-    
-      
-  
+	div(id="publication")
+		table
+			each publication in publications
+				tr(id="publication_table_row")
+					td
+						i(id="delete_icon").fa.fa-trash-o.fa-2x
+					td(id="publication_date")
+						p(class="year")
+							= publication.year
+						p
+							= publication.month
+					td
+						p= publication.title
+						p= publication.authors
+						p(class="venue")= publication.venue

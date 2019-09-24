@@ -1,16 +1,16 @@
 mixin projet(projectList)
-    ul
-        if projectList.length
-            each project in projectList
-                div(id="project")
-                    li
-                        p=project.student +", "
-                            a(href= "project-" + project._id + ".pug")=project.title
-                        p(class="small")
-                            |Supervisor:
-                            =project.supervisor
-                        p(class="small")
-                            | Co-supervisor(s):
-                            =project.cosupervisor
-        else
-            p No publication available
+	ul
+		if projectList.length
+			each project in projectList
+				div(id="project")
+					li
+						p=project.student +", "
+							a(href= "project-" + project._id + ".pug")=project.title
+						p(class="small")
+							|Supervisor:
+							=project.supervisor
+						p(class="small")
+							| Co-supervisor(s):
+							=project.cosupervisor
+		else
+			p No publication available
