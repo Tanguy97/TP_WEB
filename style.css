@@ -166,7 +166,7 @@ p.subtitle {
     margin: 10px 5px 10px 5px;
     padding: 10px;
     border-radius: 10px;
-    align-self: center;
+    /*align-self: center;*/
 }
 
 /* button navigation de page index */
@@ -195,37 +195,39 @@ p.subtitle {
     color: var(--nav-lang-background-color);
 }
 
-
-
 #language_switch {
+    position: relative;
     width: 50px;
-    margin: 10px 5px 10px 5px;
-    padding: 10px 5px 10px 5px;
-    align-self: center;
     color: var(--link-text-color);
 }
 
+
 #language_tab {
+    left: 0px;
     display: none;
+    position: absolute;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: var(--nav-lang-background-color-hover);
+    opacity: 1;
+    margin-top: 10px;
 }
 
 #language_tab:hover {
     display: block;
-    position: relative;
-    top: 60px;
-    width: 60px;
-    right: 70px;
-    background: var(--nav-lang-background-color);
-    border-radius: 0px;
-    align-self: center;
+    position: absolute;
 }
 
 #language_tab div {
-    padding: 10px;
+    padding: 10px 60px 10px 10px;
+    position: relative;
 }
 
-#language_tab div:hover {
-    background-color: var(--nav-lang-background-color-hover);
+#language_switch:hover #language_tab {
+     display: block;
+ }
+
+#language_switch:hover #language_tab div:hover {
+    background-color: var(--publication-pagination-link-notactive-hover-background-color);
 }
 
 #language_tab:hover {
